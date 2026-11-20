@@ -1,0 +1,366 @@
+[
+  {
+    "name": "vice-city-golden-hour",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 218056,
+    "dominant": "#181818",
+    "vivid": [
+      "#F0C078",
+      "#F0D890",
+      "#F0A878",
+      "#F0C090",
+      "#D89048"
+    ]
+  },
+  {
+    "name": "vice-city-neon-skyline",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 409040,
+    "dominant": "#786090",
+    "vivid": [
+      "#F0D878",
+      "#F0C090",
+      "#F0C060",
+      "#F0D860",
+      "#F0C048"
+    ]
+  },
+  {
+    "name": "jason-lucia-convertible",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 205450,
+    "dominant": "#303030",
+    "vivid": [
+      "#F0C078",
+      "#D87848",
+      "#F0D890",
+      "#F0C090",
+      "#D8A878"
+    ]
+  },
+  {
+    "name": "vice-city-mural",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 384984,
+    "dominant": "#181818",
+    "vivid": [
+      "#F0A890",
+      "#F0A878",
+      "#186090",
+      "#F09090",
+      "#187890"
+    ]
+  },
+  {
+    "name": "grassrivers-channel",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 493870,
+    "dominant": "#484830",
+    "vivid": [
+      "#D8C090",
+      "#D8D8A8",
+      "#787830",
+      "#786048",
+      "#D8C0A8"
+    ]
+  },
+  {
+    "name": "vice-city-neon-station",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 309798,
+    "dominant": "#604860",
+    "vivid": [
+      "#FF9078",
+      "#F09078",
+      "#FFA890",
+      "#F07860",
+      "#F09060"
+    ]
+  },
+  {
+    "name": "store-hold-up",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 156070,
+    "dominant": "#303030",
+    "vivid": [
+      "#007830",
+      "#007848",
+      "#009048",
+      "#187848",
+      "#A86018"
+    ]
+  },
+  {
+    "name": "leonida-keys-boats",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 366946,
+    "dominant": "#D8D8D8",
+    "vivid": [
+      "#003090",
+      "#1830A8",
+      "#183090",
+      "#184878",
+      "#F0A878"
+    ]
+  },
+  {
+    "name": "mount-kalaga-helicopter",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 116228,
+    "dominant": "#181800",
+    "vivid": [
+      "#A80018",
+      "#780018",
+      "#F0D890",
+      "#F0D878",
+      "#F0C078"
+    ]
+  },
+  {
+    "name": "real-dimez-studio",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 265242,
+    "dominant": "#180018",
+    "vivid": [
+      "#F048D8",
+      "#A80078",
+      "#F060D8",
+      "#A80090",
+      "#F030D8"
+    ]
+  },
+  {
+    "name": "artwork-beach",
+    "width": 1770,
+    "height": 2160,
+    "bytes": 275010,
+    "dominant": "#A86060",
+    "vivid": [
+      "#F0A890",
+      "#F0A878",
+      "#F0C090",
+      "#F090A8",
+      "#F090D8"
+    ]
+  },
+  {
+    "name": "artwork-rooftop",
+    "width": 1920,
+    "height": 2160,
+    "bytes": 338952,
+    "dominant": "#6060A8",
+    "vivid": [
+      "#78D8F0",
+      "#F0C090",
+      "#90D8F0",
+      "#F090C0",
+      "#D8A890"
+    ]
+  },
+  {
+    "name": "jason-bike",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 147282,
+    "dominant": "#F0F0F0",
+    "vivid": [
+      "#D8C090",
+      "#D8A878",
+      "#C09060",
+      "#D8A890",
+      "#C07860"
+    ]
+  },
+  {
+    "name": "lucia-neon",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 194508,
+    "dominant": "#181830",
+    "vivid": [
+      "#0048D8",
+      "#0060C0",
+      "#0060D8",
+      "#0048C0",
+      "#0030A8"
+    ]
+  },
+  {
+    "name": "lucia-poolside",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 233464,
+    "dominant": "#F0F0D8",
+    "vivid": [
+      "#D84830",
+      "#C03030",
+      "#C04830",
+      "#C04818",
+      "#A84818"
+    ]
+  },
+  {
+    "name": "jason-lucia-sunset",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 98762,
+    "dominant": "#181818",
+    "vivid": [
+      "#F0D878",
+      "#F0C078",
+      "#F0C090",
+      "#F0A860",
+      "#F0A878"
+    ]
+  },
+  {
+    "name": "club-embrace",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 133234,
+    "dominant": "#001878",
+    "vivid": [
+      "#0048D8",
+      "#0060D8",
+      "#0048C0",
+      "#0030C0",
+      "#0030A8"
+    ]
+  },
+  {
+    "name": "vice-city-beach",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 198084,
+    "dominant": "#F0F0D8",
+    "vivid": [
+      "#F04830",
+      "#F0A860",
+      "#D84830",
+      "#F0D860",
+      "#F0C060"
+    ]
+  },
+  {
+    "name": "vice-city-ferris-wheel",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 298544,
+    "dominant": "#181818",
+    "vivid": [
+      "#D8A860",
+      "#786018",
+      "#787818",
+      "#606018",
+      "#C0A860"
+    ]
+  },
+  {
+    "name": "vice-city-lowrider",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 574044,
+    "dominant": "#909090",
+    "vivid": [
+      "#C00060",
+      "#FF7878",
+      "#C00078",
+      "#C00048",
+      "#F04878"
+    ]
+  },
+  {
+    "name": "leonida-keys-aerial",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 343940,
+    "dominant": "#303030",
+    "vivid": [
+      "#307890",
+      "#3090A8",
+      "#3078A8",
+      "#309090",
+      "#306090"
+    ]
+  },
+  {
+    "name": "ambrosia-sunset",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 126620,
+    "dominant": "#181800",
+    "vivid": [
+      "#F0D890",
+      "#F0D878",
+      "#F0C078",
+      "#F0C060",
+      "#F0A848"
+    ]
+  },
+  {
+    "name": "port-gellhorn-dusk",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 314234,
+    "dominant": "#483030",
+    "vivid": [
+      "#FFD878",
+      "#FFC078",
+      "#FFD890",
+      "#F0C060",
+      "#F0C078"
+    ]
+  },
+  {
+    "name": "boobie-ike-neon",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 148098,
+    "dominant": "#301848",
+    "vivid": [
+      "#FFA890",
+      "#F0A890",
+      "#F09078",
+      "#F09090",
+      "#F0A878"
+    ]
+  },
+  {
+    "name": "mount-kalaga-cattle",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 370660,
+    "dominant": "#303018",
+    "vivid": [
+      "#D8C090",
+      "#604818",
+      "#C0A878",
+      "#606018",
+      "#D8A878"
+    ]
+  },
+  {
+    "name": "vice-city-rooftop-pool",
+    "width": 2560,
+    "height": 1440,
+    "bytes": 189602,
+    "dominant": "#181818",
+    "vivid": [
+      "#184860",
+      "#186078",
+      "#D8A878",
+      "#306078",
+      "#C0A860"
+    ]
+  }
+]

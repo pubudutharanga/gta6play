@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Design tokens (Tailwind v4 @theme)                                 */
+/* ------------------------------------------------------------------ */
+
+@theme inline {
+  --color-dusk: #1A0F3D;
+  --color-dusk-deep: #120A2B;
+  --color-flamingo: #FF4F9A;
+  --color-tangerine: #FF8F3F;
+  --color-lagoon: #2DD4C0;
+  --color-sand: #FFEBCB;
+  --color-haze: #B9A7E8;
+
+  --font-display: var(--font-big-shoulders), "Impact", sans-serif;
+  --font-body: var(--font-instrument-sans), "Segoe UI", sans-serif;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Root                                                               */
+/* ------------------------------------------------------------------ */
+
+:root {
+  color-scheme: dark;
+  --scene-accent: #F0C078;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dusk);
+  color: var(--color-sand);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Focus ring                                                         */
+/* ------------------------------------------------------------------ */
+
+:focus-visible {
+  outline: 3px solid var(--color-lagoon);
+  outline-offset: 3px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Hero entrance animation                                            */
+/* ------------------------------------------------------------------ */
+
+@keyframes hero-grade-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-entrance {
+  animation: hero-grade-rise 1s ease-out both;
+}
+
+.hero-entrance > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-entrance > *:nth-child(2) { animation-delay: 0.25s; }
+.hero-entrance > *:nth-child(3) { animation-delay: 0.4s; }
+.hero-entrance > *:nth-child(4) { animation-delay: 0.55s; }
+
+.hero-entrance > * {
+  animation: hero-grade-rise 0.8s ease-out both;
+}
+
+/* Play now glow pulse — one shot */
+@keyframes glow-pulse {
+  0% { box-shadow: 0 0 24px rgba(255, 79, 154, 0.35); }
+  50% { box-shadow: 0 0 40px rgba(255, 79, 154, 0.55); }
+  100% { box-shadow: 0 0 24px rgba(255, 79, 154, 0.35); }
+}
+
+.play-glow-pulse {
+  animation: glow-pulse 1.2s ease-out 0.6s 1;
+}
+
+/* Launch transition panels */
+@keyframes launch-panel-left {
+  0%   { transform: translateX(-100%); opacity: 1; }
+  70%  { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(0); opacity: 0; }
+}
+
+@keyframes launch-panel-right {
+  0%   { transform: translateX(100%); opacity: 1; }
+  70%  { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(0); opacity: 0; }
+}
+
+.launch-panel-left {
+  animation: launch-panel-left 600ms ease-out both;
+}
+
+.launch-panel-right {
+  animation: launch-panel-right 600ms ease-out both;
+}
+
+/* Light sweep on Play now button hover */
+@keyframes light-sweep {
+  from { transform: translateX(-100%) skewX(-15deg); }
+  to   { transform: translateX(300%) skewX(-15deg); }
+}
+
+/* Indeterminate progress bar */
+@keyframes indeterminate {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Reduced motion                                                     */
+/* ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-entrance,
+  .hero-entrance > * {
+    animation: none !important;
+  }
+
+  .play-glow-pulse,
+  .launch-panel-left,
+  .launch-panel-right {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Scroll margin for anchored sections                                */
+/* ------------------------------------------------------------------ */
+
+[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Utility: hide scrollbar                                            */
+/* ------------------------------------------------------------------ */
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
