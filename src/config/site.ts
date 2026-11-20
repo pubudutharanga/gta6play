@@ -46,7 +46,7 @@ export const siteConfig = {
     'GTA VI in the browser is an independent project by {publisher}. It is not affiliated with, endorsed by or sponsored by Rockstar Games, Inc. or Take-Two Interactive Software, Inc. "Grand Theft Auto" and "GTA" are trademarks of Take-Two Interactive Software, Inc. All other trademarks belong to their respective owners.',
 
   privacyNotice:
-    "This site does not use cookies or third-party trackers. If analytics are added in the future, this notice will be updated.",
+    "This free demo is ad-supported. Third-party advertising partners may use cookies, local storage and similar technologies to deliver, measure and limit ads.",
 } as const;
 
 /** Resolve the disclaimer with the publisher name filled in. */

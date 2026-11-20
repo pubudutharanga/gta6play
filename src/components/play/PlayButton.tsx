@@ -3,8 +3,9 @@
 // src/components/play/PlayButton.tsx
 // The Play now button — the page's single primary action.
 
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useGameLauncher } from "./GameLauncherProvider";
+import { armPopunderCapture, primePopunder } from "@/lib/ads";
 
 type Variant = "hero" | "header" | "cta";
 
@@ -17,20 +18,70 @@ const variantStyles: Record<Variant, string> = {
 
 export function PlayButton({ variant }: { variant: Variant }) {
   const { state, launch, adapter } = useGameLauncher();
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const intentRef = useRef(false);
+  const launchGuardRef = useRef(false);
 
   const handleIntent = useCallback(() => {
+    // Prime the popunder before the click so its click listener is ready.
+    primePopunder();
+
     if (!intentRef.current) {
       intentRef.current = true;
       adapter.preload?.();
     }
   }, [adapter]);
 
-  const handleClick = useCallback(() => {
-    if (state.status === "idle" || state.status === "error") {
-      launch(variant);
-    }
+  const startGame = useCallback(() => {
+    if (launchGuardRef.current) return;
+    if (state.status !== "idle" && state.status !== "error") return;
+
+    // Hold the popunder the click produces before launching the fake game.
+    armPopunderCapture();
+    launchGuardRef.current = true;
+    launch(variant);
   }, [state.status, launch, variant]);
+
+  // Keep the latest launcher available to the native capture listener.
+  const startGameRef = useRef(startGame);
+  useEffect(() => {
+    startGameRef.current = startGame;
+  }, [startGame]);
+
+  // Allow a retry after a reset or a failed capability check.
+  useEffect(() => {
+    if (state.status === "idle" || state.status === "error") {
+      launchGuardRef.current = false;
+    }
+  }, [state.status]);
+
+  useEffect(() => {
+    // The popunder tag installs a document-level capture click listener and
+    // stops the event before React's onClick runs. Window capture fires first,
+    // so the fake game still starts on the same click the ad tag uses to build
+    // its popunder URL.
+    const handleClickCapture = (event: MouseEvent) => {
+      if (event.button !== 0) return;
+
+      const button = buttonRef.current;
+      const target = event.target;
+      if (!button || !(target instanceof Node) || !button.contains(target)) {
+        return;
+      }
+
+      startGameRef.current();
+    };
+
+    window.addEventListener("click", handleClickCapture, true);
+    return () =>
+      window.removeEventListener("click", handleClickCapture, true);
+  }, []);
+
+  const handleClick = useCallback(() => {
+    // Covers programmatic clicks and primes the tag for the next real click.
+    primePopunder();
+    startGame();
+  }, [startGame]);
 
   const isLoading = state.status === "loading";
   const isError = state.status === "error";
@@ -43,11 +94,13 @@ export function PlayButton({ variant }: { variant: Variant }) {
 
   return (
     <button
+      ref={buttonRef}
       type="button"
       data-testid="play-now"
       data-play-location={variant}
       onClick={handleClick}
       onPointerEnter={handleIntent}
+      onPointerDown={handleIntent}
       onFocus={handleIntent}
       onTouchStart={handleIntent}
       aria-busy={isLoading || undefined}

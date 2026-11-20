@@ -7,6 +7,7 @@ import { seoTitle, seoDescription } from "@/content/content";
 import { SkipLink } from "@/components/ui/SkipLink";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LauncherRoot } from "@/components/play/LauncherRoot";
+import { AdScripts } from "@/components/ads/AdScripts";
 
 /* ------------------------------------------------------------------ */
 /*  Fonts (local, self-hosted, display: swap, latin subset)            */
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="min-h-full flex flex-col">
         <SkipLink />
         <LauncherRoot>{children}</LauncherRoot>
+        <AdScripts />
       </body>
     </html>
   );
