@@ -15,7 +15,7 @@ export const siteConfig = {
   contactEmail: "hello@example.com", // TODO(owner): replace with a real support address
   socialProfiles: [] as string[], // TODO(owner): add URLs if applicable
   language: "en" as const,
-  lastUpdated: "2026-11-20", // bump when content actually changes
+  lastUpdated: "2026-11-22", // bump when content actually changes
   price: "Free" as const,
   priceCurrency: "USD" as const,
   priceValue: "0" as const,
@@ -31,6 +31,12 @@ export const siteConfig = {
     "GTA 6 gameplay",
     "how to play GTA 6",
     "GTA 6 requirements",
+    "GTA 6 unblocked",
+    "GTA 6 web version",
+    "GTA 6 no download",
+    "play GTA VI online free",
+    "GTA 6 browser game",
+    "GTA 6 PC browser",
   ] as const,
   genre: ["Action-adventure", "Open world"] as const, // TODO(owner)
   headerHeight: 64, // px, used for scroll-margin-top

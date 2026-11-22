@@ -48,7 +48,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: seoTitle,
   description: seoDescription,
+  keywords: [...siteConfig.keywords],
   applicationName: siteConfig.name,
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.name,
+    statusBarStyle: "black-translucent",
+  },
+  formatDetection: { telephone: false },
+  other: {
+    "apple-mobile-web-app-capable": "yes",
+  },
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
   publisher: siteConfig.publisher,
@@ -70,13 +80,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: siteConfig.name,
-    locale: siteConfig.language,
+    locale: "en_US",
     title: seoTitle,
     description: seoDescription,
     url: siteConfig.url,
     images: [
       {
         url: "/og-background.jpg",
+        secureUrl: `${siteConfig.url}/og-background.jpg`,
+        type: "image/jpeg",
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} — open-world action game playable in a desktop browser`,
@@ -87,7 +99,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: seoTitle,
     description: seoDescription,
-    images: ["/og-background.jpg"],
+    images: [
+      {
+        url: "/og-background.jpg",
+        alt: `${siteConfig.name} — open-world action game playable in a desktop browser`,
+      },
+    ],
   },
   ...(Object.keys(verification ?? {}).length > 0 ? { verification } : {}),
 };

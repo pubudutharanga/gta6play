@@ -52,6 +52,7 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Content-Language", value: "en" },
           {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",

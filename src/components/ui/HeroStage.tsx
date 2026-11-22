@@ -55,7 +55,7 @@ export function HeroStage({
       />
 
       {/* Backdrop */}
-      <div className="absolute inset-0" aria-hidden="true">
+      <div className="absolute inset-0">
         <div
           className={`absolute inset-0 transition-opacity duration-500 ${
             activeIndex === 0 ? "opacity-100" : "opacity-0"

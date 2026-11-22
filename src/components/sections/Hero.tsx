@@ -13,7 +13,7 @@ export function Hero() {
       heroImage={
         <Image
           src={heroScreenshot.src}
-          alt=""
+          alt={heroScreenshot.alt}
           fill
           sizes="100vw"
           preload

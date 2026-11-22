@@ -2,6 +2,7 @@ import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { QuickAnswer } from "@/components/sections/QuickAnswer";
 import { Features } from "@/components/sections/Features";
+import { Locations } from "@/components/sections/Locations";
 import { Screenshots } from "@/components/sections/Screenshots";
 import { HowToPlay } from "@/components/sections/HowToPlay";
 import { Controls } from "@/components/sections/Controls";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <QuickAnswer />
         <Features />
+        <Locations />
         <Screenshots />
         <HowToPlay />
         <Controls />

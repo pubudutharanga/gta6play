@@ -19,10 +19,16 @@ export function buildLlmsTxt(): string {
 
 ## Sections
 - [Play now](${url}/#play): start the game in your browser
-- [Screenshots](${url}/#scenes): in-game images with descriptions
+- [What is GTA 6 in the browser?](${url}/#about): quick answer and key facts
+- [GTA 6 gameplay](${url}/#features): what you can do in the game
+- [World and locations](${url}/#locations): Vice City, the Leonida Keys, Grassrivers, Mount Kalaga, Port Gellhorn and Ambrosia
+- [GTA 6 screenshots](${url}/#scenes): in-game images with descriptions
 - [How to play GTA 6](${url}/#how-to-play): three steps
 - [Controls](${url}/#controls): keyboard, mouse and gamepad bindings
 - [System requirements](${url}/#requirements): browser and hardware needs
-- [FAQ](${url}/#faq): price, supported devices, PS4 and Xbox availability, the official release, Lucia's actor and support
+- [FAQ](${url}/#faq): price, supported devices, PC and Mac, PS4 and Xbox, the official release, Jason and Lucia, Leonida, Steam, single-player, accounts and support
+
+## Optional
+- [Full page text](${url}/llms-full.txt): every section, control, requirement and FAQ answer in one file
 `;
 }

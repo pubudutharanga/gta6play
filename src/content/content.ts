@@ -64,6 +64,58 @@ export const features = {
 };
 
 /* ------------------------------------------------------------------ */
+/*  Locations                                                          */
+/* ------------------------------------------------------------------ */
+
+export const locations = {
+  heading: "GTA 6 map and locations: Vice City and Leonida",
+  intro:
+    "The browser edition's open world covers the fictional state of Leonida — from the neon skyline of Vice City to the wetlands, mountains and coastal towns around it. The map is open from the start, with no loading screens between districts.",
+  items: [
+    {
+      name: "Vice City",
+      detail:
+        "The main city: downtown skyscrapers, the beachfront, the boardwalk and a waterfront that lights up after dark.",
+    },
+    {
+      name: "Leonida Keys",
+      detail:
+        "A chain of tropical islands with turquoise water, sandbars and fishing boats — the map's southern edge.",
+    },
+    {
+      name: "Grassrivers",
+      detail:
+        "Slow rivers and subtropical wetlands that cut through the countryside west of the city.",
+    },
+    {
+      name: "Mount Kalaga",
+      detail:
+        "Forested ridges and open hills in the north, with cattle country and viewpoints over the state.",
+    },
+    {
+      name: "Port Gellhorn",
+      detail:
+        "An industrial port with cargo ships, cranes and container yards on the coast.",
+    },
+    {
+      name: "Ambrosia",
+      detail:
+        "A quiet small town on the plains, surrounded by power lines and open sky.",
+    },
+  ],
+};
+
+/* ------------------------------------------------------------------ */
+/*  Screenshots                                                        */
+/* ------------------------------------------------------------------ */
+
+export const screenshotsSection = {
+  heading: "GTA 6 screenshots: Vice City and Leonida",
+  intro:
+    "Browse in-game images of Vice City, the Leonida Keys, Mount Kalaga and the rest of Leonida. Select any image to view it full size.",
+};
+
+/* ------------------------------------------------------------------ */
 /*  How to play                                                        */
 /* ------------------------------------------------------------------ */
 
@@ -90,7 +142,7 @@ export const howToPlay = {
 /* ------------------------------------------------------------------ */
 
 export const controls = {
-  heading: "Controls",
+  heading: "GTA 6 controls: keyboard, mouse and gamepad",
   caption: "Default keyboard, mouse and gamepad controls",
   bindings: [
     { action: "Move", keyboard: "W A S D", gamepad: "Left stick" }, // TODO(owner)
@@ -112,7 +164,7 @@ export const controls = {
 /* ------------------------------------------------------------------ */
 
 export const requirements = {
-  heading: "System requirements",
+  heading: "GTA 6 system requirements",
   minimum: {
     label: "Minimum",
     specs: [
@@ -140,10 +192,10 @@ export const requirements = {
 /* ------------------------------------------------------------------ */
 
 export const faq = {
-  heading: "Frequently asked questions",
+  heading: "GTA 6 frequently asked questions",
   items: [
     {
-      question: "Is GTA VI free to play?",
+      question: "Is GTA 6 free to play online?",
       answer:
         "Yes. GTA VI in the browser is completely free. There are no purchases, subscriptions or hidden fees.",
     },
@@ -178,6 +230,21 @@ export const faq = {
         "Manni L. Perez plays Lucia Caminos in the official GTA VI.", // TODO(owner): verify cast credit
     },
     {
+      question: "Who are Jason and Lucia in GTA 6?",
+      answer:
+        "Jason and Lucia are the two leads in the official GTA VI. In this browser edition you follow them through Vice City's criminal underworld. Manni L. Perez plays Lucia Caminos.",
+    },
+    {
+      question: "What is Leonida in GTA 6?",
+      answer:
+        "Leonida is the fictional state in GTA VI, inspired by Florida. It includes Vice City, the Leonida Keys, Grassrivers, Mount Kalaga, Port Gellhorn and Ambrosia.",
+    },
+    {
+      question: "Is GTA 6 on Steam?",
+      answer:
+        "The official GTA VI is a PlayStation 5 and Xbox Series X|S release. This browser edition is not on Steam; it runs in a desktop browser with no download.",
+    },
+    {
       question: "How do I play GTA 6 in my browser?",
       answer:
         "Press Play now on this page. GTA 6 loads in the same tab; use WASD and the mouse, or connect a gamepad. No download or install is required.",
@@ -191,11 +258,6 @@ export const faq = {
       question: "Is my progress saved?",
       answer:
         "Yes. Progress is saved in your browser's local storage. Clearing your browser data will erase your save. A cloud-save option may be added later.", // TODO(owner): confirm save mechanism
-    },
-    {
-      question: "Why is the first load slow?",
-      answer:
-        "The game downloads about 50 MB of assets on the first visit. After that, most files are cached, so return visits load much faster.", // TODO(owner): confirm download size
     },
     {
       question: "Which controllers work?",
@@ -216,6 +278,31 @@ export const faq = {
       question: "Can I play fullscreen?",
       answer:
         "Yes. After the game starts, click the fullscreen button in the game overlay or press F11 in your browser.",
+    },
+    {
+      question: "Can I play GTA 6 on PC or Mac?",
+      answer:
+        "Yes. The browser edition runs on Windows, macOS and Linux desktops and laptops in current Chrome, Edge, Firefox or Safari. Nothing to download or install.",
+    },
+    {
+      question: "How big is GTA 6 in the browser?",
+      answer:
+        "The first load downloads about 50 MB of assets. After that, most files are cached, so return visits load much faster.",
+    },
+    {
+      question: "Is GTA 6 single-player?",
+      answer:
+        "Yes. This browser edition is single-player. There is no online multiplayer mode.",
+    },
+    {
+      question: "Do I need to create an account?",
+      answer:
+        "No. Press Play now and the game loads in the same tab. No sign-up, login or account is required.",
+    },
+    {
+      question: "Can I play on a Chromebook?",
+      answer:
+        "If your Chromebook supports WebGL 2 and runs a current Chrome browser, it should work. Performance depends on the hardware.",
     },
   ],
 };

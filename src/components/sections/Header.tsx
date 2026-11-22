@@ -7,6 +7,7 @@ import { PlayButton } from "@/components/play/PlayButton";
 import { siteConfig } from "@/config/site";
 
 const navLinks = [
+  { label: "World", href: "#locations" },
   { label: "Scenes", href: "#scenes" },
   { label: "How to play", href: "#how-to-play" },
   { label: "Controls", href: "#controls" },
@@ -68,7 +69,7 @@ export function Header() {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-4 md:flex lg:gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}

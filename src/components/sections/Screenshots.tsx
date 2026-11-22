@@ -5,6 +5,7 @@
 
 import { useState, useCallback, lazy, Suspense } from "react";
 import Image from "next/image";
+import { screenshotsSection } from "@/content/content";
 import { galleryScreenshots } from "@/content/screenshots";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/config/site";
@@ -45,8 +46,12 @@ export function Screenshots() {
           id="screenshots-heading"
           className="font-display text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-tight text-sand"
         >
-          Screenshots
+          {screenshotsSection.heading}
         </h2>
+
+        <p className="mt-6 max-w-2xl font-body text-lg leading-relaxed text-sand/90">
+          {screenshotsSection.intro}
+        </p>
 
         <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {galleryScreenshots.map((shot, i) => (

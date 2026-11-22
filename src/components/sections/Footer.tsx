@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 
 const footerLinks = [
   { label: "Play", href: "#play" },
+  { label: "World", href: "#locations" },
   { label: "Screenshots", href: "#scenes" },
   { label: "How to play", href: "#how-to-play" },
   { label: "Controls", href: "#controls" },

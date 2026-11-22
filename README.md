@@ -41,11 +41,11 @@ Copy `.env.example` to `.env.local`.
 
 ## Editing copy
 
-All visible text — hero, quick answer, features, steps, controls, requirements,
-FAQ, final CTA, loading tips, title and description — lives in
-[`src/content/content.ts`](src/content/content.ts). Site-wide facts (URL,
-publisher, contact, last-updated date, price, browsers) live in
-[`src/config/site.ts`](src/config/site.ts).
+All visible text — hero, quick answer, features, locations, screenshots intro,
+steps, controls, requirements, FAQ, final CTA, loading tips, title and
+description — lives in [`src/content/content.ts`](src/content/content.ts).
+Site-wide facts (URL, publisher, contact, last-updated date, price, browsers)
+live in [`src/config/site.ts`](src/config/site.ts).
 
 The FAQ, quick facts, metadata, JSON-LD, `sitemap.xml` and `llms.txt` are all
 generated from those two files, so they cannot drift apart. Edit copy there,
@@ -92,12 +92,18 @@ Generated routes, all statically prerendered:
 
 - `/robots.txt` — search and user bots allowed; training bots configurable
 - `/sitemap.xml` — one URL with `lastModified` and every screenshot as an image
-- `/manifest.webmanifest` — name, colors, 192/512 icons
-- `/llms.txt` — generated from `site.ts`; passes the llms.txt format checks
+- `/manifest.webmanifest` — name, colors, 192/512 icons, a maskable icon, a
+  Play shortcut and a screenshot
+- `/llms.txt` — section index for AI crawlers, generated from `site.ts` and
+  `content.ts`
+- `/llms-full.txt` — the full page text (facts, locations, controls,
+  requirements and FAQ) for retrieval
 - `/` — canonical, Open Graph, Twitter card, JSON-LD `@graph`
 
-The JSON-LD graph contains `Organization`, `WebSite`, `WebPage`, `VideoGame`
-and `FAQPage`. It is generated from the same content as the visible page. There
+The JSON-LD graph contains `Organization`, `WebSite`, `WebPage`, `VideoGame`,
+`HowTo` and `FAQPage`. It is generated from the same content as the visible page.
+It includes `speakable` selectors for the quick answer and FAQ, plus
+`softwareRequirements`, `character`, `gameLocation` and the free `Offer`. There
 are no ratings, reviews, player counts or offers beyond the free price.
 
 `export const ensureStatic = "navigation"` in the root layout makes the build
@@ -108,7 +114,8 @@ is limited to the launcher, scene switcher, lightbox and mobile menu.
 
 1. Add the domain to Google Search Console and Bing Webmaster Tools.
 2. Submit `https://gta6play.vercel.app/sitemap.xml`.
-3. Run the Rich Results Test and the Schema Markup Validator on the live URL.
+3. Run the Rich Results Test and the Schema Markup Validator on the live URL;
+   confirm the `FAQPage` and `HowTo` items are detected.
 4. Watch the Generative AI performance report in Search Console.
 5. Check server logs for `OAI-SearchBot`, `ChatGPT-User`, `Claude-SearchBot`,
    `PerplexityBot` and friends.

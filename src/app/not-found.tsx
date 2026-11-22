@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: "Page not found",
+  description:
+    "The page you were looking for isn't here. Head back to GTA VI and press Play now.",
+};
 
 export default function NotFound() {
   return (
