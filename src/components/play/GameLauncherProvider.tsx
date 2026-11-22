@@ -18,7 +18,6 @@ import type { GameAdapter, LaunchStatus } from "./types";
 import { placeholderAdapter } from "./adapters/placeholderAdapter";
 import { iframeAdapter } from "./adapters/iframeAdapter";
 import { track } from "@/lib/analytics";
-import { openCapturedPopunder } from "@/lib/ads";
 import { checkCapabilities } from "@/lib/webgl";
 
 /* ------------------------------------------------------------------ */
@@ -146,13 +145,6 @@ export function GameLauncherProvider({ children }: { children: ReactNode }) {
       .then(() => {
         if (controller.signal.aborted) return;
         dispatch({ type: "RUNNING" });
-
-        // The fake game has "loaded". Release the popunder URL captured from
-        // the Play click after one frame so the running screen paints first.
-        requestAnimationFrame(() => {
-          if (controller.signal.aborted) return;
-          openCapturedPopunder();
-        });
       })
       .catch((err: unknown) => {
         if (controller.signal.aborted) return;

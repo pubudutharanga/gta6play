@@ -5,7 +5,6 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { useGameLauncher } from "./GameLauncherProvider";
-import { armPopunderCapture, primePopunder } from "@/lib/ads";
 
 type Variant = "hero" | "header" | "cta";
 
@@ -23,9 +22,6 @@ export function PlayButton({ variant }: { variant: Variant }) {
   const launchGuardRef = useRef(false);
 
   const handleIntent = useCallback(() => {
-    // Prime the popunder before the click so its click listener is ready.
-    primePopunder();
-
     if (!intentRef.current) {
       intentRef.current = true;
       adapter.preload?.();
@@ -36,8 +32,6 @@ export function PlayButton({ variant }: { variant: Variant }) {
     if (launchGuardRef.current) return;
     if (state.status !== "idle" && state.status !== "error") return;
 
-    // Hold the popunder the click produces before launching the fake game.
-    armPopunderCapture();
     launchGuardRef.current = true;
     launch(variant);
   }, [state.status, launch, variant]);
@@ -78,8 +72,6 @@ export function PlayButton({ variant }: { variant: Variant }) {
   }, []);
 
   const handleClick = useCallback(() => {
-    // Covers programmatic clicks and primes the tag for the next real click.
-    primePopunder();
     startGame();
   }, [startGame]);
 
